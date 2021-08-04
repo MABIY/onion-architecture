@@ -8,8 +8,8 @@ repositories {
     mavenCentral()
 }
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+group = 'com.lh.onionarchitecture'
+version = "${projectVersion}"
 sourceCompatibility = 11
 
 dependencies {
@@ -20,5 +20,8 @@ dependencies {
 
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation ("org.projectlombok:lombok:${projctLombokVersion}")
+    implementation ("io.springfox:springfox-swagger2:${springfoxSwagger2Version}")
+    implementation ("io.springfox:springfox-swagger-ui:${springfoxSwaggerUiVersion}")
 }
 

@@ -8,8 +8,8 @@
  */
 rootProject.name = 'onion-architecture'
 
-include 'domain-model'
-include 'domain-service'
+include 'object-model'
+include 'object-service'
 include 'application-service'
 include 'web-api'
 include 'infrastructure'

@@ -2,11 +2,14 @@ plugins {
     id 'groovy-gradle-plugin'
 }
 
+apply from: '../gradle/loadProps.gradle'
+
 repositories {
     gradlePluginPortal()
 }
 
+
 dependencies {
-    implementation "io.spring.gradle:dependency-management-plugin:1.0.7.RELEASE"
-    implementation "org.springframework.boot:spring-boot-gradle-plugin:2.3.9.RELEASE"
+    implementation("io.spring.gradle:dependency-management-plugin:${dependencyManagementPluginVersion}")
+    implementation("org.springframework.boot:spring-boot-gradle-plugin:${springBootGradlePluginVersion}")
 }

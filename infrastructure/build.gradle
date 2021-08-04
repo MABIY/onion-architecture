@@ -3,7 +3,8 @@ plugins {
 }
 
 dependencies {
-
+    runtimeOnly("mysql:mysql-connector-java")
+    implementation("com.baomidou:mybatis-plus-boot-starter:${mybatisPlusBootStartVersion}")
 }
 
 

@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: web-api-dev
+  devtools:
+    restart:
+      enabled: true
+  jpa:
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+file:
+  location: /data/file
+logging:
+  level:
+    org.springframework: INFO
+    com.yunmo: DEBUG
+

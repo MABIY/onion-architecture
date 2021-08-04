@@ -1,0 +1,18 @@
+spring:
+  profiles: web-api-qa
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/bim
+    username: root
+    password: shuju
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        show_sql: true
+        hbm2ddl:
+          import_files: import.sql
+          auto: update
+jpush:
+  master_secret: db22e30dd036128b952b1f33
+  app_key: ca636b2b83440a650e37f635
