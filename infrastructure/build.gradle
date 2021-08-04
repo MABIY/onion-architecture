@@ -1,0 +1,10 @@
+plugins {
+    id 'demo.java-library-conventions'
+}
+
+dependencies {
+
+}
+
+
+
