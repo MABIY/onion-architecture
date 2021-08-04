@@ -4,7 +4,11 @@ plugins{
     id 'application'
 }
 
+jar {
+    enabled = true
+}
 
-tasks.distZip.enabled = false
-tasks.distTar.enabled = false
-tasks.startScripts.enabled =false
+bootJar {
+    layered()
+    archiveAppendix = 'boot'
+}
