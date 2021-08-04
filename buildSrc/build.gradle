@@ -5,3 +5,8 @@ plugins {
 repositories {
     gradlePluginPortal()
 }
+
+dependencies {
+    implementation "io.spring.gradle:dependency-management-plugin:1.0.7.RELEASE"
+    implementation "org.springframework.boot:spring-boot-gradle-plugin:2.3.9.RELEASE"
+}

@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' apply false
+    id 'io.spring.dependency-management'
 }
 
 repositories {
@@ -11,6 +13,8 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 11
 
 dependencies {
+    // import a BOM
+//    implementation platform('org.springframework.boot:spring-boot-dependencies:2.3.8.RELEASE')
     // Use JUnit Jupiter API for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
 
