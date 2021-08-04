@@ -4,6 +4,9 @@ plugins {
     id 'org.springframework.boot' version '2.3.9.RELEASE'
 }
 
+application {
+    mainClass = 'app.Application'
+}
 
 dependencies {
     project(':application-service')
