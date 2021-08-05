@@ -4,7 +4,7 @@ plugins {
 
 
 dependencies {
-    project(':object-model')
+   api project(':object-model')
 }
 
 

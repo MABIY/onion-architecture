@@ -3,8 +3,15 @@ plugins {
 }
 
 dependencies {
-    project(':object-service')
+    api project(':object-service')
+    api 'org.springframework:spring-tx'
 }
 
 
 
+tasks.withType(JavaCompile) {
+    options.compilerArgs = [
+            '-Amapstruct.unmappedTargetPolicy=WARN',
+            '-Amapstruct.defaultComponentModel=spring'
+    ]
+}

@@ -8,20 +8,30 @@ repositories {
     mavenCentral()
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+        vendor = JvmVendorSpec.ORACLE
+    }
+}
+
 group = 'com.lh.onionarchitecture'
 version = "${projectVersion}"
-sourceCompatibility = 11
 
 dependencies {
     // import a BOM
 //    implementation platform('org.springframework.boot:spring-boot-dependencies:2.3.8.RELEASE')
-    // Use JUnit Jupiter API for testing.
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
 
-    // Use JUnit Jupiter Engine for testing.
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
     implementation ("org.projectlombok:lombok:${projctLombokVersion}")
+    annotationProcessor ("org.projectlombok:lombok:${projctLombokVersion}")
     implementation ("io.springfox:springfox-swagger2:${springfoxSwagger2Version}")
     implementation ("io.springfox:springfox-swagger-ui:${springfoxSwaggerUiVersion}")
+    implementation("org.mapstruct:mapstruct:${mapstructVersion}")
+    annotationProcessor("org.mapstruct:mapstruct-processor:${mapstructVersion}")
+    annotationProcessor("org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
